@@ -141,7 +141,7 @@
 .gridDiv {
   display: grid;
   grid-template-columns: repeat(12, 50px);
-  grid-template-rows: repeat(12, 50px)
+  grid-template-rows: repeat(13, 50px)
 }
 
 .button {

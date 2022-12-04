@@ -1,57 +1,20 @@
 {
     "nodes": [
         {
-            "id": 1,
-            "active": false,
-            "note": "C1"
+            "id": 13,
+            "active": true,
+            "note": "C2"
             
         },
         {
-            "id": 2,
+            "id": 12,
             "active": false,
-            "note": "C#"
-            
+            "note": "B"
         },
         {
-            "id": 3,
+            "id": 11,
             "active": false,
-            "note": "D"
-            
-        },
-        {
-            "id": 4,
-            "active": false,
-            "note": "D#"
-            
-        },
-        {
-            "id": 5,
-            "active": false,
-            "note": "E"
-            
-        },
-        {
-            "id": 6,
-            "active": false,
-            "note": "F"
-            
-        },
-        {
-            "id": 7,
-            "active": false,
-            "note": "F#"
-            
-        },
-        {
-            "id": 8,
-            "active": false,
-            "note": "G"
-            
-        },
-        {
-            "id": 9,
-            "active": false,
-            "note": "G#"
+            "note": "Bb"
             
         },
         {
@@ -61,17 +24,59 @@
             
         },
         {
-            "id": 11,
+            "id": 9,
             "active": false,
-            "note": "Bb"
+            "note": "G#"
             
         },
         {
-            "id": 12,
+            "id": 8,
             "active": false,
-            "note": "C2"
+            "note": "G"
+            
+        },
+        {
+            "id": 7,
+            "active": false,
+            "note": "F#"
+            
+        },
+        {
+            "id": 6,
+            "active": false,
+            "note": "F"
+            
+        },
+        {
+            "id": 5,
+            "active": false,
+            "note": "E"
+            
+        },
+        {
+            "id": 4,
+            "active": false,
+            "note": "D#"
+            
+        },
+        {
+            "id": 3,
+            "active": false,
+            "note": "D"
+            
+        },
+        {
+            "id": 2,
+            "active": false,
+            "note": "C#"
+            
+        },
+        {
+            "id": 1,
+            "active": false,
+            "note": "C1"
             
         }
     ]
-
+    
 }
