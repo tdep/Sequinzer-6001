@@ -1,0 +1,77 @@
+{
+    "nodes": [
+        {
+            "id": 1,
+            "active": false,
+            "note": "C1"
+            
+        },
+        {
+            "id": 2,
+            "active": false,
+            "note": "C#"
+            
+        },
+        {
+            "id": 3,
+            "active": false,
+            "note": "D"
+            
+        },
+        {
+            "id": 4,
+            "active": false,
+            "note": "D#"
+            
+        },
+        {
+            "id": 5,
+            "active": false,
+            "note": "E"
+            
+        },
+        {
+            "id": 6,
+            "active": false,
+            "note": "F"
+            
+        },
+        {
+            "id": 7,
+            "active": false,
+            "note": "F#"
+            
+        },
+        {
+            "id": 8,
+            "active": false,
+            "note": "G"
+            
+        },
+        {
+            "id": 9,
+            "active": false,
+            "note": "G#"
+            
+        },
+        {
+            "id": 10,
+            "active": false,
+            "note": "A"
+            
+        },
+        {
+            "id": 11,
+            "active": false,
+            "note": "Bb"
+            
+        },
+        {
+            "id": 12,
+            "active": false,
+            "note": "C2"
+            
+        }
+    ]
+
+}
