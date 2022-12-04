@@ -1,16 +1,33 @@
 import { useState } from 'react'
 
-const NodeGrid = ({ grid }, num) => {
-    const [noteRow, setNoteRow] = useState([])
-    const aNoteRow = []
+const NodeGrid = ({ grid }) => {
+    const noteGrid = []
     const rowPopulator = () => {
         grid.map((note) => {
-            
-        }
-        )
+            const fillArray = (len) => {
+                const aNoteRow = [];
+                for (let i =0; i < len; i++) {
+                    aNoteRow.push(note);
+                }
+                return noteGrid.push(aNoteRow)
+            }
+            return fillArray(12)
+        })
     }
+    rowPopulator()
+    console.log(noteGrid)
     return (
-        rowPopulator()
+        <div>
+            {
+                noteGrid.map((row) => {
+                    return row.map((node) => {
+                        return (
+                            <button>{node.note}</button>
+                        )
+                    })
+                })
+            }
+        </div>
     )
   }
 
