@@ -21,7 +21,7 @@ const App = () => {
 
         <Header />
         <div className="main">
-          {/* <Controls /> */}
+          <Controls />
           <NodeGrid grid={grid} />
         </div>
 

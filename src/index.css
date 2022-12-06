@@ -16,6 +16,21 @@
   margin: 0px 8px;
 }
 
+.tempo {
+  border: 1px dashed black;
+  display: flex;
+  flex-grow: 1;
+  flex-direction:column;
+  flex-basis: 300px;
+  flex-shrink: 1;
+  gap: 5px;
+  justify-content: center;
+}
+
+.tempo-control {
+
+}
+
 .transport {
   border: 1px dashed black;
   display: flex;
