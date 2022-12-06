@@ -3,7 +3,7 @@ import Tempo from './Tempo'
 import Transport from './Transport'
 import File from './File'
 
-const Header = (seconds, play, pause, reset) => {
+const Header = () => {
 
     return(
       <div className="header">

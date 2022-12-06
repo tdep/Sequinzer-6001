@@ -1,44 +1,28 @@
 import { useState, useEffect } from 'react'
 
+
 const Tempo = () => {
-    const [seconds, setSeconds] = useState(0)
-    const [isActive, setIsActive] = useState(false)
-  
-    const play = () => {
-      setIsActive(true)
+    const [rate, setRate] = useState(60)
+    const slider = document.getElementById("tempo-control")
+    const slideHandler = () => {
+        setRate(slider.value)
     }
-  
-    const pause = () => {
-      setIsActive(false)
-    }
-  
-    const reset = () => {
-      setSeconds(0);
-      setIsActive(false)
-    }
-  
-    useEffect(() => {
-      let interval = null;
-      if (isActive) {
-        interval = setInterval(() => {
-          setSeconds(seconds => seconds + 1);
-        }, 1000);
-      } else if (!isActive && seconds !== 0) {
-        clearInterval(interval)
-      }
-      return () => clearInterval(interval);
-    }, [isActive, seconds]);
+    const tempo = rate;
 
     return (
         <div className="tempo">
-            <label for="tempo-control">Tempo</label>
+            <p><label for="tempo-control">Tempo</label>
             <input 
                 type="range" 
-                id="tempo-control" 
-                name="tempo-control" 
+                name="tempo-control"
+                id="tempo-control"
+                class="slider"
+                value={rate}
                 min="0" 
                 max="240"
+                onChange={slideHandler}
             />
+            <span class="slider_label">Tempo: {tempo}</span></p>
         </div>
     )
 }

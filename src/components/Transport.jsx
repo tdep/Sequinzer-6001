@@ -1,4 +1,4 @@
-
+import { TimingSet, play, pause, reset }  from "./TimingSet"
 
 const Transport = () => {
     return (
