@@ -19,7 +19,7 @@ const App = () => {
   return (
     <>
 
-        {/* <Header /> */}
+        <Header />
         <div className="main">
           {/* <Controls /> */}
           <NodeGrid grid={grid} />
