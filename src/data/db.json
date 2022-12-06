@@ -3,7 +3,7 @@
         {
             "id": 13,
             "active": false,
-            "note": "C2"
+            "note": "C^"
             
         },
         {
@@ -74,7 +74,7 @@
         {
             "id": 1,
             "active": false,
-            "note": "C1"
+            "note": "C"
             
         }
     ]

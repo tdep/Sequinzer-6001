@@ -4,6 +4,7 @@ const onOffSwitch = (target) => {
     target.active = !target.active
     document.getElementById(`${target.id}`).style.background = target.active?"green":"lightgrey"
     console.log(target)
+    console.log(target.id)
 }
 
 const NodeGrid = ({ grid }) => {
@@ -26,6 +27,8 @@ const NodeGrid = ({ grid }) => {
             {
                 noteGrid.map((row) => {
                     return row.map((node, i) => {
+                        i += 1
+                        console.log(node)
                         node.id = `${node.note}` + i
                         return (
                             <button 
