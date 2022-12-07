@@ -1,4 +1,5 @@
 import { useState, useEffect } from 'react'
+import TimingSet from './TimingSet'
 
 const Tempo = () => {
     const [rate, setRate] = useState(60)
@@ -12,7 +13,7 @@ const Tempo = () => {
 
     return (
         <div className="tempo">
-            <p><label for="tempo-control">Tempo: {tempo}bpm</label>
+            <div><label for="tempo-control">Tempo: {tempo}bpm</label>
             <div className="dial">
                 <img 
                     id="tempo-dial" 
@@ -34,7 +35,8 @@ const Tempo = () => {
                     />
                 </div>
             </div>
-            </p>
+            </div>
+            
         </div>
     )
 }

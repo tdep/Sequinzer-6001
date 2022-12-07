@@ -1,13 +1,27 @@
-import { TimingSet, play, pause, reset }  from "./TimingSet"
+import TimingSet from "./TimingSet"
 
-const Transport = () => {
+
+const Transport = (setIsActive) => {
+    
     return (
         <div className = "transport">
-            <button onClick={play} className="play">Play</button>
-            <button onClick={pause} className="pause">Pause</button>
-            <button onClick={reset} className="stop">Stop</button>
+            <button onClick={()=>{setIsActive(true)}} className="play">Play</button>
+            <button onClick={()=>{setIsActive(false)}} className="pause">Pause</button>
+            <button onClick={()=>{setIsActive(false)}} className="stop">Stop</button>
         </div>
     )
 }
 
 export default Transport
+// const play = () => {
+//     setIsActive(true)
+// }
+
+// const pause = () => {
+//     setIsActive(false)
+// }
+
+// const reset = () => {
+//     setSeconds(0);
+//     setIsActive(false)
+// }

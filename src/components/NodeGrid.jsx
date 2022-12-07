@@ -4,7 +4,7 @@ const onOffSwitch = (target) => {
     target.active = !target.active
     const noteButton = document.getElementById(`${target.id}`)
     noteButton.style.background = target.active?"green":"lightgrey"
-    console.log(target, target.active)
+    // console.log(target, target.active)
 }
 
 const NodeGrid = ({ grid }) => {
@@ -18,7 +18,7 @@ const NodeGrid = ({ grid }) => {
                 }
                 return noteGrid.push(aNoteRow)
             }
-            return fillArray(12)
+            return fillArray(16)
         })
     }
     rowPopulator()
