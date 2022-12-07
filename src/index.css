@@ -27,8 +27,9 @@
   justify-content: center;
 }
 
-.tempo-control {
-
+.tempo .slider {
+  height: 50px;
+  -webkit-appearance: slider-vertical;
 }
 
 .transport {

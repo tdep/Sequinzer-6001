@@ -14,6 +14,7 @@ const Tempo = () => {
             <p><label for="tempo-control">Tempo</label>
             <input 
                 type="range" 
+                orient="vertical"
                 name="tempo-control"
                 id="tempo-control"
                 class="slider"
