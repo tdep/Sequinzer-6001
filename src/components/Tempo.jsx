@@ -12,30 +12,29 @@ const Tempo = () => {
 
     return (
         <div className="tempo">
-            <p><label for="tempo-control">Tempo</label>
-            <div className="input">
-                <input 
-                    type="range" 
-                    orient="vertical"
-                    name="tempo-control"
-                    id="tempo-control"
-                    class="slider"
-                    value={rate}
-                    min="0" 
-                    max="280"
-                    onChange={slideHandler}
+            <p><label for="tempo-control">Tempo: {tempo}bpm</label>
+            <div className="dial">
+                <img 
+                    id="tempo-dial" 
+                    src="src/assets/radialDial.png" 
+                    height="50px" 
+                    width="50px"
                 />
-                <div className="dial">
-                    <img 
-                        id="tempo-dial" 
-                        src="src/assets/radialDial.png" 
-                        height="50px" 
-                        width="50px"
+                <div className="input">
+                    <input 
+                        type="range" 
+                        orient="vertical"
+                        name="tempo-control"
+                        id="tempo-control"
+                        class="slider"
+                        value={rate}
+                        min="0" 
+                        max="280"
+                        onChange={slideHandler}
                     />
                 </div>
-
             </div>
-            <span class="slider_label">Tempo: {tempo}</span></p>
+            </p>
         </div>
     )
 }

@@ -27,18 +27,35 @@
   justify-content: center;
 }
 
-.input {
+.dial {
   position: relative;
+  display: flex;
+  justify-content: center;
 }
 
-.dial {
+.input {
   position: absolute;
 }
 
-.tempo .slider {
+#tempo-control {
   display: flex;
   height: 50px;
-  -webkit-appearance: slider-vertical;
+  width: 50px;
+  cursor: grab;
+  -webkit-appearance: none;
+  background: transparent;
+  transform: rotate(-90deg);
+  
+}
+
+#tempo-control::-webkit-slider-thumb {
+  -webkit-appearance: none;
+  border: none;
+  height: 5px;
+  width: 5px;
+  background: transparent;
+  cursor: grab;
+  margin-top: -4px;
 }
 
 #tempo-dial {
