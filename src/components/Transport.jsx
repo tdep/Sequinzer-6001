@@ -10,15 +10,3 @@ const Transport = ({setIsActive, setTimer}) => {
 }
 
 export default Transport
-// const play = () => {
-//     setIsActive(true)
-// }
-
-// const pause = () => {
-//     setIsActive(false)
-// }
-
-// const reset = () => {
-//     setSeconds(0);
-//     setIsActive(false)
-// }

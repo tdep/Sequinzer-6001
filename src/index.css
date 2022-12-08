@@ -61,7 +61,7 @@
 #tempo-dial {
   transform: rotate(60deg);
   display:flex;
-  position: releative;
+  position: relative;
 }
 
 .transport {
