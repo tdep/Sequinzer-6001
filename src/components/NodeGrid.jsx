@@ -23,19 +23,31 @@ const NodeGrid = ({ grid }) => { //grid is the fetched objects from App
         })
     }
     rowPopulator() //invoking the function
+    // const oscPlay = async () => {
+
+    //     noteGrid.map((row) => {//populate the grid in the dom with the grid array from above
+    //         return row.map((node, i) => {//node = each square, i is to set ids
+    //             i += 1//set i to be 1 more than the index
+    //             node.id = `${node.note}` + i 
+    //             console.log(`${i}: ${node.id}`)
+    //         })
+    //     })
+    
+    // }
+    // oscPlay()
     return (
         <div className="gridDiv">
             {
                 noteGrid.map((row) => {//populate the grid in the dom with the grid array from above
                     return row.map((node, i) => {//node = each square, i is to set ids
-                        i += 1
-                        node.id = `${node.note}` + i
+                        i += 1//set i to be 1 more than the index
+                        node.id = `${node.note}` + i //set node id to be note + new i value
                         return (
-                            <button 
-                            id = {node.id}
+                            <button //trigger button
+                            id = {node.id}//same id as node
                             onClick={(e) => {//call the function to control the logic for each button
                                 e.preventDefault()
-                                onOffSwitch(e.target)}} 
+                                onOffSwitch(e.target)}} //call function on the target
                             >{node.note}</button>
                         )
                     })

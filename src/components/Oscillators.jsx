@@ -1,18 +1,22 @@
 import { useEffect } from 'react'
 const Oscillators = ({noteGrid}) => {
     //Oscillator Bank
-    const oscA = ['a','a','a','a','a','a','a','a','a','a','a','a','a','a','a','a']
-    const oscB = ['b','b','b','b','b','b','b','b','b','b','b','b','b','b','b','b',]
     const beatIndex = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16]
-
     const oscPlay = async () => {
-        beatIndex.forEach((beat, i) => {
-                const osc1 = oscA[0][i];
-                const osc2 = oscB[1][i];
-                console.log(`osc1: ${osc1}, osc2: ${osc2}`)
+        beatIndex.map((beat, i) => {
+            noteGrid.map((row) => {//populate the grid in the dom with the grid array from above
+                return row.map((node, j) => {//node = each square, i is to set ids
+                    j += 1//set i to be 1 more than the index
+                    node.id = `${node.note}` + j 
+                    console.log(row[i].node)
+                    // console.log(`${j}: ${node.id}`)
+                })
+            })
+
         })
-        oscPlay()
+        
     }
+    oscPlay()
     // const oscillator1 = async () => {
     //     osc1.forEach((note1, i) => {
     //         const note2 = osc2[i];
