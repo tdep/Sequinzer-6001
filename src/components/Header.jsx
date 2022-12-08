@@ -4,7 +4,7 @@ import Transport from './Transport'
 import File from './File'
 import TimingSet from './TimingSet'
 
-const Header = ({setIsActive, setTimer, rate, setRate, currentBar, setCurrentBar}) => {
+const Header = ({setIsActive, setTimer, rate, setRate, currentBar, setCurrentBar, Tone}) => {
 
     return(
       <div className="header">
@@ -13,7 +13,7 @@ const Header = ({setIsActive, setTimer, rate, setRate, currentBar, setCurrentBar
           <TimingSet rate={rate} currentBar={currentBar} setCurrentBar={setCurrentBar}/>
         </div>
         <Tempo rate={rate} setRate={setRate}/>
-        <Transport setIsActive={setIsActive} setTimer={setTimer}/>
+        <Transport setIsActive={setIsActive} setTimer={setTimer} Tone={Tone}/>
         <File />
       </div>
     )

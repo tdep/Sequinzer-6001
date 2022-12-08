@@ -212,6 +212,7 @@ const Oscillators = ({ data, currentBar, onOffSwitch }) => {
                             <button
                             id = {node.id}
                             name = {node.note}
+                            bar = {node.bar}
                             onClick={(e) => {
                                 e.preventDefault()
                                 onOffSwitch(e.target)

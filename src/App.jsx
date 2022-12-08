@@ -27,7 +27,7 @@ const App = () => {
     const gToDSharp = new Tone.PolySynth(Tone.Synth).toDestination();
     const dToC = new Tone.PolySynth(Tone.Synth).toDestination();
     const now = Tone.now()
-    console.log(name)
+
     cToGSharp.triggerAttackRelease(name, "8n", now)
     gToDSharp.triggerAttackRelease(name, "8n", now)
     dToC.triggerAttackRelease(name, "8n", now)
@@ -37,9 +37,14 @@ const App = () => {
   const onOffSwitch = (target) => {//sets the logic for the button action
     target.active = !target.active
     const noteButton = document.getElementById(`${target.id}`)
+    const notePosition = parseInt(target.id.slice(0,2))*1
     if (target.active) {
       noteButton.style.background = "green"
       synth(target.name)
+      console.log(target.name, target.id, notePosition)
+      if (notePosition === currentBar){
+        console.log(notePosition === currentBar)
+      }
     } else {
       noteButton.style.background = "lightgrey"
     }
@@ -55,6 +60,7 @@ const App = () => {
           setRate={setRate}
           currentBar={currentBar}
           setCurrentBar={setCurrentBar}
+          Tone={Tone}
           />
 
         <div className="main">
