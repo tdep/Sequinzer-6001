@@ -7,15 +7,7 @@ import { useEffect, useState } from 'react'
 //     // console.log(target, target.active)
 // }
 
-// const playback = (bar, row) => {
-//     let i = bar
-//     row.map((node) => {
-//         return node.map((note)=> {
-//             return(note)
-//         })
-//     })
 
-// }
 const Oscillators = ({ data, currentBar, onOffSwitch }) => {
 
     const osc1 = [data.hiC]
@@ -50,6 +42,7 @@ const Oscillators = ({ data, currentBar, onOffSwitch }) => {
     //Oscillator Bank
     const oscBank = async () => {
         const oscillator1 = () => {
+            //populate the row with objects
             osc1.map((notes) => {
                 notes.map((note) => {
                     return (
@@ -218,6 +211,7 @@ const Oscillators = ({ data, currentBar, onOffSwitch }) => {
                         return(
                             <button
                             id = {node.id}
+                            name = {node.note}
                             onClick={(e) => {
                                 e.preventDefault()
                                 onOffSwitch(e.target)

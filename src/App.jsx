@@ -3,6 +3,7 @@ import NodeGrid from './components/defunct/NodeGrid'
 import Oscillators from './components/Oscillators'
 import Header from './components/Header'
 import Controls from './components/Controls'
+import * as Tone from 'tone'
 //import TimingSet to effect timer
 
 const App = () => {
@@ -20,26 +21,32 @@ const App = () => {
     request()
   }, [])
 
-  // useEffect (() => {
-  //   const request = async () => {
-  //     let req = await fetch(`http://localhost:3000/nodes`, {
-  //       method: "POST",
-  //       headers: {
-  //         'Content-Type' : 'application/json',
-  //       },
-  //       body: JSON.stringify()
+  
+  const synth = (name) => {
+    const cToGSharp = new Tone.PolySynth(Tone.Synth).toDestination();
+    const gToDSharp = new Tone.PolySynth(Tone.Synth).toDestination();
+    const dToC = new Tone.PolySynth(Tone.Synth).toDestination();
+    const now = Tone.now()
+    console.log(name)
+    cToGSharp.triggerAttackRelease(name, "8n", now)
+    gToDSharp.triggerAttackRelease(name, "8n", now)
+    dToC.triggerAttackRelease(name, "8n", now)
+  }
 
-  //     })
-  //   }
-  // })
 
   const onOffSwitch = (target) => {//sets the logic for the button action
     target.active = !target.active
     const noteButton = document.getElementById(`${target.id}`)
-    noteButton.style.background = target.active?"green":"lightgrey"//sets the css to correspond with the logic
+    if (target.active) {
+      noteButton.style.background = "green"
+      synth(target.name)
+    } else {
+      noteButton.style.background = "lightgrey"
+    }
+    // noteButton.style.background = target.active?"green":"lightgrey"//sets the css to correspond with the logic
     // console.log(target, target.active)
 }
-//POST request to update objects???
+
   return (
     <>
         <Header 
@@ -49,7 +56,7 @@ const App = () => {
           currentBar={currentBar}
           setCurrentBar={setCurrentBar}
           />
-        {/* export timer value */}
+
         <div className="main">
           <Controls />
           <Oscillators data={data} currentBar={currentBar} onOffSwitch={onOffSwitch} />
