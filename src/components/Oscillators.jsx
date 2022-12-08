@@ -1,12 +1,22 @@
 import { useEffect, useState } from 'react'
 
-const onOffSwitch = (target) => {//sets the logic for the button action
-    target.active = !target.active
-    const noteButton = document.getElementById(`${target.id}`)
-    noteButton.style.background = target.active?"green":"lightgrey"//sets the css to correspond with the logic
-    // console.log(target, target.active)
-}
-const Oscillators = ({ data }) => {
+// const onOffSwitch = (target) => {//sets the logic for the button action
+//     target.active = !target.active
+//     const noteButton = document.getElementById(`${target.id}`)
+//     noteButton.style.background = target.active?"green":"lightgrey"//sets the css to correspond with the logic
+//     // console.log(target, target.active)
+// }
+
+// const playback = (bar, row) => {
+//     let i = bar
+//     row.map((node) => {
+//         return node.map((note)=> {
+//             return(note)
+//         })
+//     })
+
+// }
+const Oscillators = ({ data, currentBar, onOffSwitch }) => {
 
     const osc1 = [data.hiC]
     const osc2 = [data.B]
@@ -196,7 +206,8 @@ const Oscillators = ({ data }) => {
         oscillator13()
 
     }
-    console.log(grid)
+    //put the play function here
+    // console.log(row1)
     oscBank()
 
     return(

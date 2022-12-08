@@ -1,5 +1,5 @@
 import { useState } from 'react'
-import Oscillators from './Oscillators'
+import Oscillators from '../Oscillators'
 
 const Grid = ({ data }) => {
     return (

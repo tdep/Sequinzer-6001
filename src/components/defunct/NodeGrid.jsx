@@ -1,5 +1,5 @@
 import { useState } from 'react'
-import Oscillators from './Oscillators'
+import Oscillators from '../Oscillators'
 
 const onOffSwitch = (target) => {//sets the logic for the button action
     target.active = !target.active
