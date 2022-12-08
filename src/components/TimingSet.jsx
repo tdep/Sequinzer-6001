@@ -1,12 +1,11 @@
 import { useState, useEffect } from 'react'
 //import timer from App
-const TimingSet = () => {
-  //useEffect timer code goes here
+const TimingSet = ({ rate }) => {
   const [toggle, setToggle] = useState(false)
   const [currentBar, setCurrentBar] = useState(0)
   const row = [{0:1}, {1:2}, {2:3}, {3:4}, {4:5}, {5:6}, {6:7}, {7:8}]
 
-
+  const beats = (60 / rate) * 1000
 
   useEffect(() => {
     let interval = null;
@@ -18,8 +17,9 @@ const TimingSet = () => {
         setCurrentBar(currentBar => currentBar + 1)
         row.map((note) => {
           console.log(note[currentBar])
+          console.log(beats/1000)
         })
-      }, 1000)
+      }, beats)
     } else if (!toggle && currentBar !== 0) {
       clearInterval(interval)
     }

@@ -7,6 +7,7 @@ import Controls from './components/Controls'
 const App = () => {
   const [grid, setGrid] = useState([])
   const [isActive, setIsActive] = useState(false)
+  const [rate, setRate] = useState(60)
 
   useEffect (() => {
     const request = async () => {
@@ -19,7 +20,7 @@ const App = () => {
 //POST request to update objects???
   return (
     <>
-        <Header setIsActive={setIsActive}/>
+        <Header setIsActive={setIsActive} rate={rate} setRate={setRate}/>
         {/* export timer value */}
         <div className="main">
           <Controls />

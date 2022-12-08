@@ -44,7 +44,7 @@
   cursor: grab;
   -webkit-appearance: none;
   background: transparent;
-  transform: rotate(-90deg);
+  transform: rotate(270deg);
   
 }
 
