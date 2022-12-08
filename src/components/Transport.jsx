@@ -1,13 +1,10 @@
-import TimingSet from "./TimingSet"
-
-
-const Transport = (setIsActive) => {
+const Transport = ({setIsActive, setTimer}) => {
     
     return (
         <div className = "transport">
             <button onClick={()=>{setIsActive(true)}} className="play">Play</button>
             <button onClick={()=>{setIsActive(false)}} className="pause">Pause</button>
-            <button onClick={()=>{setIsActive(false)}} className="stop">Stop</button>
+            <button onClick={()=>{setIsActive(false); setTimer(0)}} className="stop">Stop</button>
         </div>
     )
 }

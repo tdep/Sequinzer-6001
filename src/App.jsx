@@ -2,10 +2,12 @@ import { useState, useEffect } from 'react'
 import NodeGrid from './components/NodeGrid'
 import Header from './components/Header'
 import Controls from './components/Controls'
-
+//import TimingSet to effect timer
 
 const App = () => {
   const [grid, setGrid] = useState([])
+  const [timer, setTimer] = useState(0)
+  const [isActive, setIsActive] = useState(false)
 
   useEffect (() => {
     const request = async () => {
@@ -18,8 +20,8 @@ const App = () => {
 
   return (
     <>
-
-        <Header />
+        <Header setIsActive={setIsActive} setTimer={setTimer}/>
+        {/* export timer value */}
         <div className="main">
           <Controls />
           <NodeGrid grid={grid} />

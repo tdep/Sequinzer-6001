@@ -1,5 +1,4 @@
 import { useState, useEffect } from 'react'
-import TimingSet from './TimingSet'
 
 const Tempo = () => {
     const [rate, setRate] = useState(60)
@@ -13,32 +12,33 @@ const Tempo = () => {
 
     return (
         <div className="tempo">
-            <div><label for="tempo-control">Tempo: {tempo}bpm</label>
-            <div className="dial">
-                <img 
-                    id="tempo-dial" 
-                    src="src/assets/radialDial.png" 
-                    height="50px" 
-                    width="50px"
-                />
-                <div className="input">
-                    <input 
-                        type="range" 
-                        orient="vertical"
-                        name="tempo-control"
-                        id="tempo-control"
-                        class="slider"
-                        value={rate}
-                        min="0" 
-                        max="280"
-                        onChange={slideHandler}
+            <div>
+                <label for="tempo-control">Tempo: {tempo}bpm</label>
+                <div className="dial">
+                    <img 
+                        id="tempo-dial" 
+                        src="src/assets/radialDial.png" 
+                        height="50px" 
+                        width="50px"
                     />
+                    <div className="input">
+                        <input 
+                            type="range" 
+                            orient="vertical"
+                            name="tempo-control"
+                            id="tempo-control"
+                            class="slider"
+                            value={rate}
+                            min="0" 
+                            max="280"
+                            onChange={slideHandler}
+                        />
+                    </div>
                 </div>
-            </div>
             </div>
             
         </div>
     )
 }
-
+//export tempo to timing set?
 export default Tempo

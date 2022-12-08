@@ -1,16 +1,7 @@
 import { useState, useEffect } from 'react'
-
-import Transport from './Transport'
-
+//import timer from App
 const TimingSet = () => {
-  const [seconds, setSeconds] = useState(0)
-  const [isActive, setIsActive] = useState(false)
-  
-  return (
-    <>
-      <Transport setIsActive={setIsActive}/>
-    </>
-  )
+//useEffect timer code goes here
 }
 
 export default TimingSet
