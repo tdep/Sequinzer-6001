@@ -1,12 +1,12 @@
 import { useState, useEffect } from 'react'
 import NodeGrid from './components/NodeGrid'
-import Grid from './components/Grid'
+import Oscillators from './components/Oscillators'
 import Header from './components/Header'
 import Controls from './components/Controls'
 //import TimingSet to effect timer
 
 const App = () => {
-  const [grid, setGrid] = useState([])
+  const [data, setData] = useState([])
   const [isActive, setIsActive] = useState(false)
   const [rate, setRate] = useState(60)
 
@@ -21,9 +21,9 @@ const App = () => {
 
   useEffect (() => {
     const request = async () => {
-      let req = await fetch("http://localhost:4000/nodes")
+      let req = await fetch("http://localhost:3000/nodes")
       let res = await req.json()
-      setGrid(res)
+      setData(res)
     }
     request()
   }, [])
@@ -34,7 +34,7 @@ const App = () => {
         {/* export timer value */}
         <div className="main">
           <Controls />
-          <Grid grid={grid}/>
+          <Oscillators data={data}/>
           {/* <NodeGrid grid={grid} /> */}
         </div>
 
