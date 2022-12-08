@@ -74,7 +74,7 @@
         {"id":"A15","active":"False","note":"A","track":"null"},
         {"id":"A16","active":"False","note":"A","track":"null"}
     ],
-    "G#": [
+    "GSharp": [
         {"id":"G#1","active":"False","note":"G#","track":"null"},
         {"id":"G#2","active":"False","note":"G#","track":"null"},
         {"id":"G#3","active":"False","note":"G#","track":"null"},
@@ -110,7 +110,7 @@
         {"id":"G15","active":"False","note":"G","track":"null"},
         {"id":"G16","active":"False","note":"G","track":"null"}
     ],
-    "F#": [
+    "FSharp": [
         {"id":"F#1","active":"False","note":"F#","track":"null"},
         {"id":"F#2","active":"False","note":"F#","track":"null"},
         {"id":"F#3","active":"False","note":"F#","track":"null"},
@@ -164,7 +164,7 @@
         {"id":"E15","active":"False","note":"E","track":"null"},
         {"id":"E16","active":"False","note":"E","track":"null"}
     ],
-    "D#": [
+    "DSharp": [
         {"id":"D#1","active":"False","note":"D#","track":"null"},
         {"id":"D#2","active":"False","note":"D#","track":"null"},
         {"id":"D#3","active":"False","note":"D#","track":"null"},
@@ -200,7 +200,7 @@
         {"id":"D15","active":"False","note":"D","track":"null"},
         {"id":"D16","active":"False","note":"D","track":"null"}
     ],
-    "C#": [
+    "CSharp": [
         {"id":"C#1","active":"False","note":"C#","track":"null"},
         {"id":"C#2","active":"False","note":"C#","track":"null"},
         {"id":"C#3","active":"False","note":"C#","track":"null"},
