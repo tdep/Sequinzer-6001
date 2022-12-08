@@ -1,3 +1,5 @@
+import { useState } from 'react'
+
 const onOffSwitch = (target) => {//sets the logic for the button action
     target.active = !target.active
     const noteButton = document.getElementById(`${target.id}`)
@@ -6,8 +8,14 @@ const onOffSwitch = (target) => {//sets the logic for the button action
 }
 
 const Grid = ({ grid }) => {
-    console.log(grid)
-    
+    const oscillatorRow = []
+    const oscillatorRowPopulator = () => {
+        grid.map((row) => {
+            oscillatorRow.push(row)
+        })
+        console.log(oscillatorRow)
+    }
+    oscillatorRowPopulator()
 }
 
 export default Grid
