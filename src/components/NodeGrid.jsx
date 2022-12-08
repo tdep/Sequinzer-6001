@@ -45,31 +45,3 @@ const NodeGrid = ({ grid }) => {
   }
 
   export default NodeGrid
-
-  // const grid = [
-  //   [{},{},{},{},{},{}],
-  //   [{},{},{},{},{},{}],
-  //   [{},{},{},{},{},{}],
-  //   [{},{},{},{},{},{}],
-  //   [{},{},{},{},{},{}],
-  //   [{},{},{},{},{},{}]
-  // ]
-
-
-    /* // const Grid = () => {
-  //   const w = grid[0].length
-  //   const h = grid.length
-  //   return(
-  //     <div style={{display: 'flex', width: `calc(100px * ${w}`, flexWrap: 'wrap'}} className="gridDiv">
-  //     {
-  //       grid.map((row) => {
-  //         return row.map((square) => {
-  //           return (
-  //           <button className="button" onClick={() => {console.log("Boop!")}}></button>
-  //           )
-  //         })
-  //       })
-  //     }
-  //     </div>
-  //     )
-  //   } */
