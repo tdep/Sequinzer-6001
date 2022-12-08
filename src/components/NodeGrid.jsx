@@ -1,4 +1,5 @@
 import { useState } from 'react'
+import Oscillators from './Oscillators'
 
 const onOffSwitch = (target) => {//sets the logic for the button action
     target.active = !target.active
@@ -40,6 +41,7 @@ const NodeGrid = ({ grid }) => { //grid is the fetched objects from App
                     })
                 })
             }
+            <Oscillators noteGrid={noteGrid}/>
         </div>
     )
   }

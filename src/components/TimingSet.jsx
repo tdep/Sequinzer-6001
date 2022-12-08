@@ -17,7 +17,7 @@ const TimingSet = ({ rate }) => {
         setCurrentBar(currentBar => currentBar + 1)
         row.map((note) => {
           console.log(note[currentBar])
-          console.log(beats/1000)
+          // console.log(beats/1000)
         })
       }, beats)
     } else if (!toggle && currentBar !== 0) {
