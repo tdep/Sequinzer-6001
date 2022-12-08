@@ -41,7 +41,7 @@ const NodeGrid = ({ grid }) => { //grid is the fetched objects from App
                     })
                 })
             }
-            <Oscillators noteGrid={noteGrid}/>
+            <Oscillators noteGrid={noteGrid} />
         </div>
     )
   }
