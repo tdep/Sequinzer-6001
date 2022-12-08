@@ -23,18 +23,6 @@ const NodeGrid = ({ grid }) => { //grid is the fetched objects from App
         })
     }
     rowPopulator() //invoking the function
-    // const oscPlay = async () => {
-
-    //     noteGrid.map((row) => {//populate the grid in the dom with the grid array from above
-    //         return row.map((node, i) => {//node = each square, i is to set ids
-    //             i += 1//set i to be 1 more than the index
-    //             node.id = `${node.note}` + i 
-    //             console.log(`${i}: ${node.id}`)
-    //         })
-    //     })
-    
-    // }
-    // oscPlay()
     return (
         <div className="gridDiv">
             {
