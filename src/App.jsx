@@ -4,6 +4,7 @@ import Oscillators from './components/Oscillators'
 import Header from './components/Header'
 import Controls from './components/Controls'
 import * as Tone from 'tone'
+import { useSequencer } from 'react-sequencer'
 //import TimingSet to effect timer
 
 const App = () => {
@@ -11,6 +12,9 @@ const App = () => {
   const [isActive, setIsActive] = useState(false)
   const [rate, setRate] = useState(60)
   const [currentBar, setCurrentBar] = useState(0)
+  // const steps = [[1, rate], [2, rate], [3, rate], [4, rate], [5, rate], [6, rate], [7, rate], [8, rate], [9, rate], [10, rate], [11, rate], [12, rate], [13, rate], [14, rate], [15, rate], [16, rate],]
+
+
 
   useEffect (() => {
     const request = async () => {
@@ -61,6 +65,7 @@ const App = () => {
           currentBar={currentBar}
           setCurrentBar={setCurrentBar}
           Tone={Tone}
+          useSequencer={useSequencer}
           />
 
         <div className="main">

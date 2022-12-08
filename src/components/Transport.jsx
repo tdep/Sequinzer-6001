@@ -1,5 +1,5 @@
 const Transport = ({setIsActive, setTimer}) => {
-    
+
     return (
         <div className = "transport">
             <button onClick={()=>{setIsActive(true)}} className="play">Play</button>
